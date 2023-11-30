@@ -26,17 +26,3 @@ jobs:
           echo $PR_NUMBER
           echo $REVIEW_ID
           echo $COMMENT_URL
-  file_contents:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v1
-
-      - name: Read file contents
-        id: read_file
-        uses: andstor/file-reader-action@v1
-        with:
-          path: "package.json"
-
-      - name: File contents
-        run: echo "${{ steps.read_file.outputs.contents }}"
