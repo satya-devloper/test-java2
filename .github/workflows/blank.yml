@@ -18,3 +18,7 @@ jobs:
           echo "Review State: ${{ github.event.review.state }}"
           echo "Review Body: ${{ github.event.review.body }}"
           echo "Review Changes: ${{ toJson(github.event.changes) }}"
+
+          echo "Review Event: ${{ toJson(github.event.review) }}"
+          echo "Changes Event: ${{ toJson(github.event.changes) }}"
+          echo "Complete Event: ${{ toJson(github.event) }}"
