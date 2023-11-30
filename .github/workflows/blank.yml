@@ -1,8 +1,11 @@
 name: PR_review
 
 on:
-  pull_request_review:
-    types: [submitted, edited]
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   test:
