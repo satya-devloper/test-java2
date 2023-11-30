@@ -14,3 +14,7 @@ jobs:
           echo ${{ github.ref }}
           echo ${{ github.event.pull_request.head.ref }}
           echo ${{ github.event.pull_request.base.ref }}
+          
+          echo "Review State: ${{ github.event.review.state }}"
+          echo "Review Body: ${{ github.event.review.body }}"
+          echo "Review Changes: ${{ toJson(github.event.changes) }}"
